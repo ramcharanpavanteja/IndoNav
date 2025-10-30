@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-ant-path/dist/leaflet-ant-path.css" />
+ 
+</head>
+<body>
+    <div class="search-container">
+
+        <form id="stationForm" autocomplete="off">
+            <input type="text" id="stationSearch" placeholder="Search for railway stations in AP..." onkeyup="filterStations()">
+            <div id="suggestions" class="suggestions-box"></div>
+        </form>
+    </div>
+   
+    <label for="source">Source:</label>
+    <select id="source" onchange="stationNavigator.changeStartPoint()">
+        <option value="">Select Source</option>
+        <option value="t2p">Entry</option>
+        <option value="t2p"></option>
+    </select>
+
+    <label for="destination">Destination:</label>
+    <select id="destination" onchange="stationNavigator.changeDestination()">
+        <option value="">Select Destination</option>
+        <option value="1">platform1</option>
+        <option value="2">platform2</option>
+    </select>
+    
+
+    <div id="map">
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.0.0/dist/leaflet-ant-path.min.js"></script>  
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="station_map.js"> </script>
+
+</body>
+</html>
+

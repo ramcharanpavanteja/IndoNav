@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+    color: #2C3E50;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#stationForm {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+}
+
+#stationSearch {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3498DB;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#stationSearch:focus {
+    border-color: #2980B9;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#suggestions {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-box div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-box div:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dropdowns and Button Styling */
+#routeSelectors {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid #3498DB;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+select:focus {
+    border-color: #2980B9;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498DB;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980B9;
+}
+
+/* Map Styling */
+#map {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Station Image Section */
+#stationImage {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+#stationImageElement {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#stationImageElement:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #stationForm {
+        width: 90%;
+    }
+
+    #routeSelectors {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map {
+        width: 90%;
+        height: 400px;
+    }
+    #map1{
+        height:400px;
+        width:90%;
+    }
+}
